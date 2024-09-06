@@ -1,6 +1,7 @@
-
+import express, { Application, Request, Response, NextFunction } from "express";
 import cors from 'cors';
-import express, {Application, NextFunction, Request, Response} from "express";
+
+const path = require('path');
 
 const app: Application = express();
 const port: number = 2024;
@@ -8,6 +9,10 @@ const port: number = 2024;
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+// Serve static files
+app.use('/uploads', express.static(path.join(__dirname, '../public/uploads'))); // Pastikan jalur file statis benar
+
 
 app.get("/", (req: Request, res: Response) => {
     res.send({
@@ -27,3 +32,5 @@ app.use((error: any, req: Request, res: Response, next: NextFunction) => {
 app.listen(port, () => {
     console.log("Application Running on Port =", "localhost:2024", port);
 });
+
+module.exports = app;
