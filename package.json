@@ -21,6 +21,7 @@
     "@vercel/node": "^3.2.10",
     "cors": "^2.8.5",
     "express": "^4.19.2",
+    "tsc-alias": "^1.8.10",
     "typescript": "^5.5.4"
   },
   "devDependencies": {
