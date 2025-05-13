@@ -18,11 +18,16 @@
   "homepage": "https://github.com/kodebel/express-starter#readme",
   "dependencies": {
     "cors": "^2.8.5",
+    "crypto-js": "^4.2.0",
     "express": "^4.19.2",
+    "jsrsasign": "^11.1.0",
+    "jsrsasign-util": "^1.0.5",
+    "nodemon": "^3.1.10",
     "vercel": "^32.3.0"
   },
   "devDependencies": {
     "@types/cors": "^2.8.17",
+    "@types/crypto-js": "^4.2.2",
     "@types/express": "^4.17.21"
   }
 }
